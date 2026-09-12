@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&display=swap");
+@import "../themes/apollo/sass/main.scss";
+
+:root {
+  --mono-text-font: "Fira Code", monospace;
+  --text-font: "Fira Sans", sans-serif;
+  --header-font: "Fira Sans", sans-serif;
+  --code-font: "Fira Code", monospace;
+}

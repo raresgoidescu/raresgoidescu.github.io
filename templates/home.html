@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    <main>
+        <article>
+            <section class="body">
+                {{<post.page_header title={section.title} />}}
+                {{ section.content | safe }}
+            </section>
+        </article>
+    </main>
+
+    <h1>Highlighted posts</h1>
+    {% set posts_section = get_section(path="posts/_index.md") %}
+    <main class="post-list">
+    <ul>
+    {%- for p in posts_section.pages | sort(attribute="date") | reverse %}
+        {% if p.extra?.highlight %}
+            {{<post.list_post page={p} />}}
+        {% endif %}
+    {% endfor -%}
+    </ul>
+    </main>
+
+    <h1>Recent posts</h1>
+    <main class="post-list">
+        {{<post.list_posts pages={posts_section.pages[:8]} />}}
+    </main>
+{% endblock main_content %}

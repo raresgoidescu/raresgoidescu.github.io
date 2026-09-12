@@ -1,0 +1,54 @@
+base_url = "https://raresgoidescu.github.io/"
+title = "Bytes N Belts"
+description = "Stuff I learnt/worked on and felt like sharing."
+
+compile_sass = true
+minify_html = true
+
+build_search_index = false
+
+theme = "apollo"
+
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" }
+]
+
+[extra]
+use_cdn = false
+fancy_code = true
+dynamic_note = true
+mathjax = true
+
+theme = "auto"
+
+menu = [
+	{ name = "/posts", url = "/posts", weight = 1 },
+	{ name = "/about", url = "/about", weight = 2 },
+]
+
+socials = [
+    { name = "github", url = "https://github.com/raresgoidescu", icon = "github" }
+]
+
+[extra.taxonomies]
+sort_by = "name"
+reverse = false
+
+[extra.analytics]
+enabled = false
+
+[extra.comments]
+enabled = true
+
+[extra.math]
+enabled = true
+
+[markdown]
+external_links_target_blank = true
+
+[markdown.highlighting]
+style = "class"
+light_theme = "github-light"
+dark_theme = "github-dark"
+error_on_missing_language = true
